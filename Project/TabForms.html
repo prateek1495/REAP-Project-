@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="TabForms.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script type="text/javascript">
+		function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+	</script>
+</head>
+<body>
+	<div class="main">
+		<div class="tab">
+  		<button class="tablinks active" onclick="openCity(event, 'LogIn')">LogIn</button>
+  		<button class="tablinks" onclick="openCity(event, 'SignUp')">SignUp</button>
+	</div>
+
+	<div id="LogIn" class="tabcontent" style="display: block;">
+		<form>
+	 	<fieldset>
+
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="usernae">Username</label>  
+			  <div class="col-md-4">
+			  <input id="usernae" name="usernae" type="text" placeholder="Username" class="form-control input-md" required="">
+			    
+			  </div>
+			</div>
+
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="passwordinput">Password</label>
+			  <div class="col-md-4">
+			    <input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-control input-md" required="">
+			    
+			  </div>
+			</div>
+
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="singlebutton"></label>
+			  <div class="col-md-4">
+			    <button id="singlebutton" name="singlebutton" class="btn btn-success">Log In</button>
+			  </div>
+			</div>
+
+			<a href="Forgot Password.html">Forgot Password</a>
+
+			</fieldset>
+			</form>
+	</div>
+
+	<div id="SignUp" class="tabcontent">
+	  	<form class="form-horizontal">
+		<fieldset>
+
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="textinput">First name</label>  
+		  <div class="col-md-4">
+		  <input id="textinput" name="textinput" type="text" placeholder="First name" class="form-control input-md" required="">
+		    
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="textinput">Last name</label>  
+		  <div class="col-md-4">
+		  <input id="textinput" name="textinput" type="text" placeholder="Last name" class="form-control input-md" required="">
+		    
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="photo">Profile Photo</label>
+		  <div class="col-md-4">
+		    <input id="photo" name="photo" class="input-file" type="file">
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="textinput">Email</label>  
+		  <div class="col-md-4">
+		  <input id="textinput" name="textinput" type="text" placeholder="Email" class="form-control input-md" required="">
+		    
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="passwordinput">Password Input</label>
+		  <div class="col-md-4">
+		    <input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-control input-md" required="">
+		    
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="passwordinput">Re-Enter Password</label>
+		  <div class="col-md-4">
+		    <input id="passwordinput" name="passwordinput" type="password" placeholder="Re-Enter Password" class="form-control input-md" required="">
+		    
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="SignUp"></label>
+		  <div class="col-md-4">
+		    <button id="SignUp" name="SignUp" class="btn btn-primary">Register</button>
+		  </div>
+		</div>
+
+		</fieldset>
+		</form>
+	</div>
+	</div>
+</body>
+</html>
