@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Page</title>
+    <title>DashBoard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/external_css.css">
+    <link rel="stylesheet" href="../css/DashBoard.css">
 </head>
 <body>
 <div class="container">
@@ -38,8 +38,47 @@
                 Certificates
             </button>
         </a>
-        <img src="http://success-factor.s3.amazonaws.com/prod/profilePicFolder/b7a40aed-6992-4028-a6ea-087e0378953b_2306-Lohit-Ahooja-PROFILEPICTURE.jpeg"
-             class="notification">
+        <div class="dropdown">
+            <button type="button" class="dropdown-toggle" data-toggle="dropdown"
+                    style="border: 0;border-radius: 50%;padding: 0">
+                <img src="http://success-factor.s3.amazonaws.com/prod/profilePicFolder/b7a40aed-6992-4028-a6ea-087e0378953b_2306-Lohit-Ahooja-PROFILEPICTURE.jpeg"
+                     class="notification"></button>
+            <div class="dropdown-menu dropdown-menu-right"
+                 style="min-width: 612px;padding-bottom: 0px;margin-top: 12px;">
+                <div style="font-size: xx-large">Your Profile</div>
+                <img
+                        src="http://success-factor.s3.amazonaws.com/prod/profilePicFolder/b7a40aed-6992-4028-a6ea-087e0378953b_2306-Lohit-Ahooja-PROFILEPICTURE.jpeg"
+                        style="float: left;width: 122px;height: 122px;margin-bottom: 10px">
+                <div style="overflow: auto">
+                    <span class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"
+                          style="font-size: large;">Newers Name :</span>
+                    <span class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8"
+                          style="font-size: large;">Lohit Ahooja </span>
+                </div>
+                <div style="overflow: auto">
+                    <span class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"
+                          style="font-size: large;">Business Unit :</span>
+                    <span class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8" style="font-size: large;">JVM</span>
+                </div>
+                <div style="overflow: auto">
+                    <span class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" style="font-size: large;">Regions :</span>
+                    <span class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8" style="font-size: large;">Ninjas </span>
+                </div>
+                <div style="overflow: auto">
+                    <span class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" style="font-size: large;">Email-id :</span>
+                    <span class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8" style="font-size: large;">lohit.ahooja@tothenew.com</span>
+                </div>
+                <div style="display: block;clear: left;overflow: hidden;background-color: #f4f4f4;padding: 10px">
+                    <button class="btn btn-secondary"
+                            style="float: left;background-color: #f4f4f4;padding-bottom: 0px;border: 0px;alignment: center">
+                        Guidelines
+                    </button>
+                    <button class="btn btn-secondary"
+                            style="float: right;background-color: #f4f4f4;padding-bottom: 0px;border: 0px">Log Out
+                    </button>
+                </div>
+            </div>
+        </div>
         <img src="../images/notification_icon.svg" class="notification" style="margin-right: 5%;padding: 10px">
     </nav>
     <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9" style="margin-top: 5.8%">
@@ -146,7 +185,7 @@
             </div>
         </div>
     </div>
-    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="z-index: 3;position:fixed;margin-left: 75%">
+    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3" style="z-index: 2;position:fixed;margin-left: 75%">
         <div class="panel panel-info" id="leftPersonInfo">
             <div class="panel-heading">
                 <div class="panel-title">MY BADGES</div>
@@ -257,13 +296,22 @@
         </div>
     </div>
 </div>
-<script>
+<script type="text/javascript">
     $(document).ready(function () {
         $("#dashboard").hover(function () {
                 $("#dashboard img").replaceWith("<img class='navBarButton' src='http://reap.tothenew.com/assets/ico-dashboard-hover-7f7417f78ecf6ffe41cf442038834929.png'>");
+                $("#dashboard img").css("background-color" , "#ff3ccb");
+                $("#dashboard").css("background-color" , "#ff3ccb","color","white");
             },
             function () {
                 $("#dashboard img").replaceWith("<img class='navBarButton' src='http://reap.tothenew.com/assets/ico-dashboard-5dff3444ebd21480dadfeeb0f0598268.png'>")
+                $("#dashboard img").css("background-color" , "white");
+                $("#dashboard").css("background-color" , "white","color","black");
+            });
+        $("#dashboard").click(function () {
+                $("#dashboard img").replaceWith("<img class='navBarButton' src='http://reap.tothenew.com/assets/ico-dashboard-hover-7f7417f78ecf6ffe41cf442038834929.png'>");
+                $("#dashboard img").css("background-color" , "#ff3ccb");
+                $("#dashboard").css("background-color" , "#ff3ccb","color","white");
             });
         $("#badges").hover(function () {
                 $("#badges img").replaceWith("<img class='navBarButton' src='http://reap.tothenew.com/assets/ico-badge-hover-6ad40a50088b6e0747f43352ae621d8c.png'>");
