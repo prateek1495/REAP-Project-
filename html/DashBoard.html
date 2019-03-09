@@ -13,10 +13,14 @@
 </head>
 <body>
 <div class="container">
-    <nav class="navbar-expand-lg navbar-light bg-light col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="position: fixed">
-        <img src="http://reap.tothenew.com/assets/reap-ed280031215032f3350f114b95893a51.png" class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="min-height: 40px">
-        <img src="http://reap.tothenew.com/assets/text_footer-8f0e1eb9c8ec931dcc66dbcdc631fe64.png" class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" style="min-height: 40px;">
-        <input type="button" class="btn btn-default col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" value="Back to Newers World">
+    <nav class="navbar-expand-lg navbar-light bg-light col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+         style="position: fixed">
+        <img src="http://reap.tothenew.com/assets/reap-ed280031215032f3350f114b95893a51.png"
+             class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="min-height: 40px">
+        <img src="http://reap.tothenew.com/assets/text_footer-8f0e1eb9c8ec931dcc66dbcdc631fe64.png"
+             class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" style="min-height: 40px;">
+        <input type="button" class="btn btn-default col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+               value="Back to Newers World">
         <a href="#">
             <button type="button" class="btn btn-default col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="dashboard">
                 <img class="navBarButton"
@@ -138,8 +142,11 @@
                 <div class="panel-title">
                     Wall Of Frames
                     <input type="text" placeholder="Search.." name="search" style="color: black;margin-left: 1%">
-                    <button type="submit"><i class="fa fa-search" content="\f002"></i></button>
-
+                    <button class="btn btn-secondary" type="submit"
+                            style="background-color: transparent;color: white;border: 0px"><i class="fa fa-search"
+                                                                                              aria-hidden="true"></i>
+                    </button>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
                 </div>
             </div>
 
@@ -215,7 +222,7 @@
         </div>
         <div class="panel panel-info" id="newersBoard">
             <div class="panel-heading">
-                <div class="panel-title" >NEWERS BOARD(LAST 7 DAYS)</div>
+                <div class="panel-title">NEWERS BOARD(LAST 7 DAYS)</div>
             </div>
 
             <div class="panel-body" style="padding-top:30px">
@@ -299,19 +306,19 @@
     $(document).ready(function () {
         $("#dashboard").hover(function () {
                 $("#dashboard img").replaceWith("<img class='navBarButton' src='http://reap.tothenew.com/assets/ico-dashboard-hover-7f7417f78ecf6ffe41cf442038834929.png'>");
-                $("#dashboard img").css("background-color" , "#ff3ccb");
-                $("#dashboard").css("background-color" , "#ff3ccb","color","white");
+                $("#dashboard img").css("background-color", "#ff3ccb");
+                $("#dashboard").css("background-color", "#ff3ccb", "color", "white");
             },
             function () {
                 $("#dashboard img").replaceWith("<img class='navBarButton' src='http://reap.tothenew.com/assets/ico-dashboard-5dff3444ebd21480dadfeeb0f0598268.png'>")
-                $("#dashboard img").css("background-color" , "white");
-                $("#dashboard").css("background-color" , "white","color","black");
+                $("#dashboard img").css("background-color", "white");
+                $("#dashboard").css("background-color", "white", "color", "black");
             });
         $("#dashboard").click(function () {
-                $("#dashboard img").replaceWith("<img class='navBarButton' src='http://reap.tothenew.com/assets/ico-dashboard-hover-7f7417f78ecf6ffe41cf442038834929.png'>");
-                $("#dashboard img").css("background-color" , "#ff3ccb");
-                $("#dashboard").css("background-color" , "#ff3ccb","color","white");
-            });
+            $("#dashboard img").replaceWith("<img class='navBarButton' src='http://reap.tothenew.com/assets/ico-dashboard-hover-7f7417f78ecf6ffe41cf442038834929.png'>");
+            $("#dashboard img").css("background-color", "#ff3ccb");
+            $("#dashboard").css("background-color", "#ff3ccb", "color", "white");
+        });
         $("#badges").hover(function () {
                 $("#badges img").replaceWith("<img class='navBarButton' src='http://reap.tothenew.com/assets/ico-badge-hover-6ad40a50088b6e0747f43352ae621d8c.png'>");
             },

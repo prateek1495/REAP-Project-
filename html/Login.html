@@ -81,24 +81,35 @@
         </div>
         <img src="../images/notification_icon.svg" class="notification" style="margin-right: 5%;padding: 10px">
     </nav>
-    <form action="/" style="margin-top: 5.8%">
-        <h1>Sign Up</h1>
-        <p>Please fill in this form to create an account.</p>
-        <hr>
-
-        <b>Email</b>
-        <input type="text" placeholder="Enter Email" name="email" required>
-
-        <b>Password</b>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <b>Repeat Password</b>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-
-        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
+    <form class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="form-group row">
+            <label for="firstName" class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-form-label"
+                   style="padding: 15px">First Name<label style="color: red">*</label></label>
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <input type="text" readonly class="form-control-plaintext" id="firstName" value="First Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lastName" class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-form-label"
+                   style="padding: 15px">Last Name<label style="color: red">*</label></label>
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <input type="text" readonly class="form-control-plaintext" id="lastName" value="email@example.com">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="staticEmail" class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-form-label"
+                   style="padding: 15px">Email <label style="color: red">*</label></label>
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Email Address">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="staticPassword" class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-form-label"
+                   style="padding: 15px">Password <label style="color: red">*</label></label>
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <input type="text" readonly class="form-control-plaintext" id="staticPassword" value="Password">
+            </div>
+        </div>
         <div class="clearfix">
             <button type="button" class="cancelButton">Cancel</button>
             <button type="submit" class="signUpButton">Sign Up</button>
